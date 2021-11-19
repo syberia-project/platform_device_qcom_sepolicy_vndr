@@ -94,6 +94,9 @@ set_prop(vendor_init, exported_system_prop)
 # Access vendor sensor properties
 set_prop(vendor_init, vendor_sensors_prop)
 
+# Access qteeconnector properties
+set_prop(vendor_init, vendor_qteeconnector_opti_prop)
+
 #Access vendor bluetooth properties
 set_prop(vendor_init, vendor_bluetooth_prop)
 userdebug_or_eng(`
@@ -104,5 +107,7 @@ set_prop(vendor_init,vendor_dcvs_prop)
 
 # Allow vendor_init to read vendor_soc_name_prop
 get_prop(vendor_init, vendor_soc_name_prop);
+# Allow vendor_init to read vendor_soc_model_prop
+get_prop(vendor_init, vendor_soc_model_prop);
 
 allow vendor_init tee_device:chr_file getattr;

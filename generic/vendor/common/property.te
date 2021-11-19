@@ -48,6 +48,7 @@ vendor_restricted_prop(vendor_km_strongbox_version_prop);
 vendor_restricted_prop(vendor_display_prop);
 vendor_internal_prop(vendor_usb_prop);
 vendor_restricted_prop(vendor_radio_prop);
+vendor_internal_prop(vendor_qteeconnector_opti_prop);
 
 #Needed for ubwc support
 vendor_restricted_prop(vendor_gralloc_prop);
@@ -108,9 +109,10 @@ vendor_restricted_prop(vendor_adsprpc_prop);
 # Wifi version recorder
 vendor_internal_prop(vendor_wifi_version);
 
-# QCV properties for storing soc_id and soc_name
+# QCV properties for storing soc_id, soc_name and soc_model
 vendor_internal_prop(vendor_soc_id_prop);
 vendor_internal_prop(vendor_soc_name_prop);
+vendor_internal_prop(vendor_soc_model_prop);
 
 #kernel console log level
 vendor_internal_prop(vendor_console_log_level_prop)
