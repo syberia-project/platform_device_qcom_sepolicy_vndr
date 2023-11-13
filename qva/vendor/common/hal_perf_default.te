@@ -34,6 +34,10 @@ init_daemon_domain(vendor_hal_perf_default)
 # Allow hwbinder call from hal client to server
 binder_call(vendor_hal_perf_client, vendor_hal_perf_server)
 
+#Allow AIDL base perf-hal communication
+hal_attribute_service(vendor_hal_perf, vendor_hal_perf2_service)
+binder_call(vendor_hal_perf_server, servicemanager)
+
 # Add hwservice related rules
 add_hwservice(vendor_hal_perf_server, vendor_hal_perf_hwservice)
 allow vendor_hal_perf_client vendor_hal_perf_hwservice:hwservice_manager find;
@@ -43,6 +47,8 @@ allow vendor_hal_perf_default proc:file rw_file_perms;
 allow vendor_hal_perf vendor_latency_device:chr_file rw_file_perms;
 get_prop(vendor_hal_perf, vendor_freq_prop)
 get_prop(vendor_hal_perf, vendor_mpctl_prop)
+get_prop(vendor_hal_perf, vendor_afp_prop)
+
 allow vendor_hal_perf_default vendor_mpctl_data_file:dir rw_dir_perms;
 allow vendor_hal_perf_default vendor_mpctl_data_file:file create_file_perms;
 allow vendor_hal_perf_default vendor_lm_data_file:dir rw_dir_perms;

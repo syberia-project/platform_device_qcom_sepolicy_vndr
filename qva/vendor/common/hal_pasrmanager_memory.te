@@ -39,6 +39,9 @@ init_daemon_domain(vendor_pasrmanager_memory_qti)
 # Allow PASR clients to perform binder IPC to PASR HAL server
 binder_call(vendor_hal_mem_pasrmanager_client, vendor_hal_mem_pasrmanager_server)
 
+hal_attribute_service(vendor_hal_mem_pasrmanager, vendor_hal_pasrmanager_service)
+binder_call(vendor_pasrmanager_memory_qti, servicemanager)
+
 # Add pasrmanager to hwservice_manager and allow it to be discovered
 hal_attribute_hwservice(vendor_hal_mem_pasrmanager, vendor_hal_pasrmanager_memory_hwservice)
 

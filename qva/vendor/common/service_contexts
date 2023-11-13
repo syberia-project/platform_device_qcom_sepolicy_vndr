@@ -30,3 +30,7 @@ vendor.qti.hardware.qxr.IQXRCamService/default         u:object_r:vendor_hal_qvr
 vendor.qti.hardware.qxr.IQXRModService/default         u:object_r:vendor_hal_qvrd_service:s0
 vendor.qti.hardware.qxr.IQXRSplitService/default        u:object_r:vendor_hal_sxrd_service:s0
 vendor.qti.hardware.qxr.IQXRAudioService/default        u:object_r:vendor_hal_sxrd_service:s0
+vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_perf2_service:s0
+vendor.qti.hardware.power.powermodule.IPowerModule/default     u:object_r:vendor_hal_poweroptservice_service:s0
+vendor.qti.memory.pasrmanager.IPasrManager/default     u:object_r:vendor_hal_pasrmanager_service:s0
+vendor.qti.qspmhal.IQspmhal/default                           u:object_r:vendor_hal_qspmhal_service:s0
