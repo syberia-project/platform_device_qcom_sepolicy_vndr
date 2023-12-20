@@ -30,3 +30,6 @@ user=system seinfo=platform name=com.qualcomm.qti.perfdump domain=vendor_perfdum
 
 #Add new domain for powerservice app
 user=_app seinfo=platform name=.pasr domain=vendor_powerservice_app type=app_data_file levelFrom=all
+
+#Add new domain for powermodule app
+user=_app seinfo=platform name=.powermodule domain=vendor_powermodule_app type=app_data_file levelFrom=all

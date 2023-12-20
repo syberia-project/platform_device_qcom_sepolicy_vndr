@@ -145,4 +145,7 @@ vndbinder_use(vendor_hal_perf);
 
 hal_client_domain(vendor_hal_perf_default, hal_thermal);
 
+binder_call(vendor_hal_perf_default, vendor_hal_poweroptservice)
+hal_client_domain(vendor_hal_perf_default, vendor_hal_poweroptservice)
+
 dontaudit vendor_hal_perf_default self:capability dac_override;
